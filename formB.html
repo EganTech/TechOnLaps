@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vorreiter Real Estate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="titleBar" style="background-color: white; margin-bottom: 10px; display: flex;">
+        <img id="logo" src="resources/logo.png" style="width: 50px; height:50px; margin-left:10px;">
+        <h2>Vorreiter Real Estate</h2>
+    </div>
+    <div style="display: flex; width: 100%; justify-content: center; position:absolute; top: 0px;">
+        <p style="margin-right: 10px;" id="home">Home</p>
+        <p style="margin-right: 10px;" id="catalog">Catalog</p>
+        <p style="margin-right: 10px;" id="services">Services</p>
+        <p style="margin-right: 10px;" id="about">About</p>
+        <p style="margin-right: 10px;" id="careers">Careers</p>
+        <p id="contacts">Contacts</p>
+    </div>
+    <button style="padding: 10px; background-color: darkgreen; color: white; border-radius: 3px; position: absolute; right: 10px; top: 0px; visibility: hidden;" disabled="true" id="listBtn">List your property</button>
+    
+    <div id="form" style="margin: 20px; background-color: white; padding: 20px;">
+        <h2 style="text-align: center;">Fill the form below to list your property</h2>
+        <h4>Type of property</h4>
+        <div style="display: flex;">
+            <p>The property is a : </p>
+            <select id="propertyType" style="margin-left: 10px; border-radius: 3px; border: 0.5px solid grey; height: 30px; margin-top: auto; margin-bottom: auto;">
+                <option>Residential</option>
+                <option>Office building</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <h4>Purpose of listing</h4>
+        <div style="display: flex; flex-wrap: wrap;">
+            <input type="checkbox" style="margin-right: 10px;" id="saleCb">
+            <p style="margin-right: 10px;">For sale</p>
+            <input type="checkbox" style="margin-right: 10px;" id="leaseCb">
+            <p>For lease</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Rent per month</p>
+            <input id="rent" type="text" style="margin-right: 10px; height: 30px; padding-left: 5px; height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; border-radius: 3px;" placeholder="Rent per month">
+            <p style="margin-right: 10px;">Sale price</p>
+            <input id="price" type="text" style="padding-left: 5px; height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; border-radius: 3px;" placeholder="Sale price">
+        </div>
+        <div style="display: flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Additional fees</p>
+            <input id="fees" type="text" style="padding-left: 5px; border-radius: 3px; height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey;" placeholder="Additional fees">
+        </div>
+        <h4>Physical address</h4>
+        <div style="display: flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">County</p>
+            <select id="county" style="margin-right:10px; height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;"></select>
+            <p style="margin-right: 10px;">Area</p>
+            <input id="area" placeholder="Area" type="text" style="margin-right:10px; height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+            <p style="margin-right: 10px;">Street</p>
+            <input id="street" placeholder="Street" type="text" style="height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+        </div>
+        <div style="display:flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Map coordinates</p>
+            <input id="coordinates" type="text" placeholder="Map coordinates" style="margin-right:10px; height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+            <p style="margin-right: 10px">Zip code</p>
+            <input id="zipcode" placeholder="Zip code" type="text" style="height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+        </div>
+        <div style="display:flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Property number</p>
+            <input id="propertyNo" placeholder="Property number" type="text" style="height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+        </div>
+        <h4>Scope</h4>
+        <div style="display:flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Size</p>
+            <input id="size" placeholder="Size" type="text" style="height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+        </div>
+        <div style="display:flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Bedrooms</p>
+            <input id="bedrooms" placeholder="Bedrooms" type="text" style="margin-right:10px ;height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+            <p style="margin-right: 10px;">Bathrooms</p>
+            <input id="bathrooms" placeholder="Bathrooms" type="text" style="height: 30px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 5px; border-radius: 3px;">
+        </div>
+        <h4>Amenities</h4>
+        <div style="display:flex">
+            <input id="poolCb" type="checkbox" style="margin-right:10px">
+            <p>Swimming pool</p>
+        </div>
+        <div style="display:flex">
+            <input id="gymCb" type="checkbox" style="margin-right:10px">
+            <p>Gym</p>
+        </div>
+        <h4>Media</h4>
+        <div style="display:flex; flex-wrap: wrap;">
+            <p style="margin-right: 10px;">Photos & videos</p>
+            <input id="file1" type="file" style="margin-right: 10px; margin-top: auto; margin-bottom:auto;">
+            <p style="margin-right: 10px;">Original title deed</p>
+            <input id="file2" type="file" style="margin-top: auto; margin-bottom:auto;">
+        </div>
+        <div style="justify-content: center; width: 100%; display: flex; margin-top: 50px; flex-wrap: wrap;">
+            <button style="width: 200px; border: 0px; padding-top: 5px; padding-bottom: 5px; border-radius: 3px;" id="doneBtn">Continue</button>
+            <button style="width: 200px; border: 0px; padding-top: 5px; padding-bottom: 5px; border-radius: 3px; margin-left: 20px; visibility: hidden;" id="submitBtn">Submit</button> 
+        </div>
+    </div>
+    <div style="background-color: #008037; text-align: center; padding-top: 20px; padding-bottom: 20px;">
+        <h2>Join 2000 plus subscribers</h2>
+        <p>Stay in the loop with everything you need to know</p>
+        <div style="display:flex; justify-content: center;">
+            <input id="emailEdt" style="width: 300px; height: 30px; padding-left: 10px; border: 0.2px solid grey; border-radius: 15px; margin-right: 10px;" placeholder="Enter your email"></input>
+            <button style="padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; border-radius: 15px; border: 0px; color: #008037; background-color: white;">Subscribe</button>
+        </div>
+    </div>
+    <div style="padding: 20px; background-color: white;">
+        <h4>Headquaters</h4>
+        <p>Mima Center, Donholm</p>
+        <h4>Email</h4>
+        <p>hello@vorreitergroup.com</p>
+        <h4>Telephone</h4>
+        <p>0720575833</p>
+        <h4>Work Hours</h4>
+        <p>Mon-Fri (8am to 4pm) Sat (9am to 1pm)</p>
+    </div>
+</body>
+
+<script src="formB.js"></script>
+<script src="header.js"></script>

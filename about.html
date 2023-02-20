@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lidox Travels</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="titleBar" style="background-color: white; margin-bottom: 10px;">
+            <img id="logo" src="resources/logo.png" style="width: 200px; height:40px; margin-left:10px">
+        </div>
+        <div style="display: flex; background-color: white; margin-top: 10px;">
+            <h3 style="color: gray; margin-left: 5px;" id="homeBtn">Home</h3>
+            <h3 style="margin-right: 5px; margin-left: 5px;">/</h3>
+            <h3 style="color: gray;" id="packagesBtn">about</h3>
+        </div>
+        <div style="background-color: white; margin: 10px; padding: 10px;">
+            <h1 style="color: grey;">About</h1>
+            <p>Lidox Travels is a tour and travelling company based in nairobi, which offers services to both domestic and international tourists</p>
+            <h3 style="color: grey;">Mission</h3>
+            <p>Offer unforgetable experiences to our customers</p>
+            <h3 style="color: grey;">Associations</h3>
+            <ul>
+                <li><p>KATA Kenya Association of travel agents</p></li>
+                <li><p>Magical Kenya</p></li>
+                <li><p>Kenya Wildlife Service</p></li>
+                <li><p>Kenya Coast Tourism Association</p></li>
+            </ul>
+            
+        </div>
+    </div>
+    <div id="company profile" style="background-color: white; padding-top: 20px; padding-bottom: 10px;">
+        <div style="display: flex; justify-content: center;">
+            <img src="resources/instagram.png" width="20px" height="20px" style="margin-right: 10px;">
+            <p style="text-align: center; width: auto; margin-bottom: auto; margin-top: auto;">lidoxtravels</p>
+        </div>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px; margin-top: 10px;">
+            <img src="resources/whatsapp.png" width="20px" height="20px" style="margin-right: 10px">
+            <p style="text-align: center; width: auto; margin-bottom: auto; margin-top: auto;">0716716649</p>
+        </div>
+
+        <h5 id="txt1" style="text-align: center">&#169 lidoxtravels 2022</h5>
+    </div>
+</body>
+
+<script>
+    let homeBtn = document.getElementById('homeBtn')
+    homeBtn.addEventListener('click', ()=>{
+        window.location.replace('/')
+    })
+</script>

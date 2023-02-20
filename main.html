@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vorreiter Real Estate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body style="overflow-x: hidden;">
+    <div id="mainDiv;" style="background-color: white;">
+        <div id="titleBar" style="background-color: white; margin-bottom: 10px; display: flex;">
+            <img id="logo" src="resources/logo.png" style="width: 50px; height:50px; margin-left:10px;">
+            <h2>Vorreiter Real Estate</h2>
+        </div>
+        <div style="display: flex; width: 100%; justify-content: center; position:absolute; top: 0px;">
+            <p style="margin-right: 10px;" id="home">Home</p>
+            <p style="margin-right: 10px;" id="catalog">Catalog</p>
+            <p style="margin-right: 10px;" id="services">Services</p>
+            <p style="margin-right: 10px;" id="about">About</p>
+            <p style="margin-right: 10px;" id="careers">Careers</p>
+            <p id="contacts">Contacts</p>
+        </div>
+        <button style="padding: 10px; background-color: darkgreen; color: white; border-radius: 3px; position: absolute; right: 10px; top: 10px; cursor: pointer;" id="listBtn">List your property</button>
+        <div id="homeDiv" style="margin-top: -10px">
+            <h5 style="position:absolute; background-color: black; opacity: 0.7; padding: 5px; margin-left: 10px; color: white; font-size: 20px; width: 300px; border-radius: 7px; padding: 15px;" id="bannerTxt">Are you looking for a listed property in kenya?</h5>
+            <button style="position: absolute; margin-left: 10px; margin-top: 120px; border-radius: 3px; border: 0px; background-color: darkgreen; color: white; padding: 5px; cursor: pointer;" id="prpertiesBtn">See our properties</button>
+            <img src="resources/banner.jpg" width="100%" style='object-fit: cover;' id="bannerImg">
+        </div>
+        <div style="padding: 20px;">
+            <div style="justify-content: center; display: flex; margin-top: 10px;">
+                <input type="text" id="searchProperty" style="border-radius: 15px; border: 0.5px solid grey; padding-left: 10px; width: 400px; height: 30px; margin-top: 20px; margin-top: auto; margin-bottom: auto;" placeholder="Search for property or enter an address">
+                <button style="margin-left: 10px; border-radius: 15px; border: 0px; background-color: darkgreen; color: white; padding: 5px; cursor: pointer; margin-top: auto; margin-bottom: auto; height: 30px; width: 100px;" id="searchBtn1">Search</button>
+            </div>
+            <p style="text-align: center;">or</p>
+            <h3 style="text-align: center;">Select a category</h3>
+            <div style="display: flex; justify-content: center;">
+                <h3 style="margin-right: 10px; padding-left: 10px; padding-top: 5px; padding-top: 5px; padding-bottom: 5px; padding-right: 10px; border-radius: 7px; border-radius: 15px; border: 0.5px solid darkgreen; color: white; background-color: darkgreen; cursor: pointer;" id="resCategory">Residential</h3>
+                <h3 style="margin-right: 10px; padding-left: 10px; padding-top: 5px; padding-top: 5px; padding-bottom: 5px; padding-right: 10px; border-radius: 7px; border-radius: 15px; border: 0.5px solid grey; cursor: pointer;" id="comCategory">Commercial</h3>
+                <h3 style="margin-right: 10px; padding-left: 10px; padding-top: 5px; padding-top: 5px; padding-bottom: 5px; padding-right: 10px; border-radius: 7px;border-radius: 15px; border: 0.5px solid grey; cursor: pointer;" id="landCategory">Land</h3>
+            </div>
+            <div style="display:flex; flex-wrap: wrap; justify-content: center; border: 0.5px solid grey; padding: 20px; border-radius: 15px; margin: 20px;" id="filterDiv">
+                <h4 style="margin-right: 10px;">Location :</h4>
+                <input id="location" placeholder="Enter location" style="margin-right: 10px; height: 20px; border-radius: 10px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 10px;">
+                <h4 style="margin-right: 10px;">Bedrooms :</h4>
+                <input id="bedrooms" placeholder="Enter no of bedrooms" style="margin-right: 10px; height: 20px; border-radius: 10px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 10px;">
+                <h4 style="margin-right: 10px;">Bathrooms :</h4>
+                <input id="bathrooms" placeholder="Enter no of bathrooms" style="margin-right: 10px; height: 20px; border-radius: 10px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 10px;">
+                <h4 style="margin-right: 10px;">Price :</h4>
+                <input id="price" placeholder="Enter price" style="height: 20px; border-radius: 10px; margin-top: auto; margin-bottom: auto; border: 0.5px solid grey; padding-left: 10px;">
+                <button style="margin-left: 10px; border-radius: 15px; border: 0px; background-color: darkgreen; color: white; padding: 5px; cursor: pointer; margin-top: auto; margin-bottom: auto; height: 30px; width: 100px;" id="searchBtn2">Search</button>
+            </div>
+            <div id="catalogDiv" style="padding: 10px; margin-top: 20px; overflow-x: auto;">
+                
+            </div>
+            <h1 style="text-align:center; margin-top: 30px; color: grey;" id="txtS">Services</h1>
+            <div id="servicesDiv" style="padding: 20px; display: flex; flex-wrap: wrap; width: 100%;">
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;" class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/world.svg">
+                    <div>
+                        <h3>House hunting</h3>
+                        <p>Find the perfect home for you and your family</p>
+                    </div>
+                </div>    
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/family (copy).svg">
+                    <div>
+                        <h3>Rent and lease</h3>
+                        <p>Rent a home for your and your family even your business</p>
+                    </div>
+                </div>
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/money.svg">
+                    <div>
+                        <h3>Sell</h3>
+                        <p>Locate a buyer for your property right away at the best market price</p>
+                    </div>
+                </div>   
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/agent (copy).svg">
+                    <div>
+                        <h3>Buy</h3>
+                        <p>We exhibit high quality homes, land, and spaces to purchase</p>
+                    </div>
+                </div>     
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/truck.svg">
+                    <div>
+                        <h3>Moving</h3>
+                        <p>Relocate to your dream home effortlessly</p>
+                    </div>
+                </div>   
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/architect (copy).svg">
+                    <div>
+                        <h3>Architechture</h3>
+                        <p>Top knotch architects and engineers to design beautiful and modern homes</p>
+                    </div>
+                </div>  
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/tool.svg">
+                    <div>
+                        <h3>Construction</h3>
+                        <p>We have just the perfect crew to plan, design and construct buildings for you</p>
+                    </div>
+                </div>  
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/renew.svg">
+                    <div>
+                        <h3>Renovation</h3>
+                        <p>Give your home a brand new feel</p>
+                    </div>
+                </div>  
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/materials.svg">
+                    <div>
+                        <h3>Materials</h3>
+                        <p>We source and deliver construction materials and tools to sites at the best rates</p>
+                    </div>
+                </div>  
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/management.svg">
+                    <div>
+                        <h3>Property management</h3>
+                        <p>We provide maintainance and management services to your property</p>
+                    </div>
+                </div>  
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/security.svg">
+                    <div>
+                        <h3>Security</h3>
+                        <p>We provide security personel to safeguard your properties</p>
+                    </div>
+                </div>  
+                <div style="display:flex; padding: 10px; border: 0.2px solid grey; border-radius: 15px; margin: 10px;"  class="xdiv">
+                    <img width="50px" height="50px" style="margin-right: 10px;" src="resources/camera (copy).svg">
+                    <div>
+                        <h3>Real estate photography</h3>
+                        <p>High quality photos of your property</p>
+                    </div>
+                </div>  
+            </div>
+    
+            <div style="background-color: #008037; text-align: center; padding-top: 20px; padding-bottom: 20px;">
+                <h2 style="color:white">Join 2000 plus subscribers</h2>
+                <p style="color:white">Stay in the loop with everything you need to know</p>
+                <div style="display:flex; justify-content: center;">
+                    <input id="emailEdt" style="width: 300px; height: 30px; padding-left: 10px; border: 0.2px solid grey; border-radius: 15px; margin-right: 10px;" placeholder="Enter your email"></input>
+                    <button style="padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; border-radius: 15px; border: 0px; color: #008037; background-color: white;">Subscribe</button>
+                </div>
+            </div>
+            <div style="background-color: white; display: flex; margin-top: 10px;">
+                <div style="width:40%; background-color: #008037; padding: 10px; border-bottom-left-radius: 3px;">
+                    <img>
+                    <h4 style="color:white">Headquaters</h4>
+                    <p style="color:white">Mima Center, Donholm</p>
+                    <h4 style="color:white">Email</h4>
+                    <p style="color:white">hello@vorreitergroup.com</p>
+                    <h4 style="color:white">Telephone</h4>
+                    <p style="color:white">0720575833</p>
+                    <h4 style="color:white">Work Hours</h4>
+                    <p style="color:white">Mon-Fri (8am to 4pm) Sat (9am to 1pm)</p>
+                </div>
+                <div style="width:60%; padding: 10px; border: 0.5 px solid gray;">
+                    <h2 style="text-align: center;">Here's every way you can reach us</h2>
+                    <div style="display: flex;">
+                        <input type="text" id="firstname" style="width: 40%; margin-right: 20px; margin-top: 20px; margin-bottom: 10px; border-radius: 7px; height: 30px; padding-left: 5px; border: 0.2px solid grey;" placeholder="First Name">
+                        <input type="text" id="lastname" style="width:40%; margin-right: 20px; margin-top: 20px; margin-bottom: 10px; border-radius: 7px; height: 30px; padding-left: 5px; border: 0.2px solid grey;" placeholder="Last Name">
+                    </div>
+                    <input type="email" id="emailEdt" style="margin-top: 10px; border-radius: 7px; height: 30px; padding-left: 5px; border: 0.2px solid grey; width: 300px;" placeholder="Email">
+                    <textarea id="commentTa" style="width:100%; height: 200px; margin-top: 20px; border-radius: 7px; padding-left: 5px; padding-top: 5px; border: 0.2px solid grey;" placeholder="Enter your comment heres"></textarea>
+                    <button style="display: block; margin-right: auto; margin-left: auto; width: 200px; height: 30px; border-radius: 7px; margin-top: 10px; border: 0.2px solid grey; background-color: #008037; color: white;">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="header.js"></script>
